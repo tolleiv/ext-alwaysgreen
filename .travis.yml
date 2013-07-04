@@ -2,4 +2,4 @@ language: php
 php:
   - "5.3"
 before_script: \curl --user-agent "AOE-CI" -sSL http://bit.ly/t3-ci | bash -s master --extension="alwaysgreen" --no-tests --quiet
-script: phpunit --strict --verbose --testsuite "alwaysgreen_all"
+script: vendor/bin/phpunit --strict --verbose --testsuite alwaysgreen_all
