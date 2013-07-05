@@ -7,5 +7,5 @@ env:
     - BRANCH=6.0
     - BRANCH=6.1
     - BRANCH=master
-before_script: cd .. && mkdir -p alwaysgreen/t3/typo3conf/ext && mv ext-alwaysgreen alwaysgreen/t3/typo3conf/ext/alwaysgreen && cd alwaysgreen
-script: \curl --user-agent "AOE-CI" -sSL http://bit.ly/t3-ci | bash -s $BRANCH --extension="alwaysgreen"
+#before_script: cd .. && mkdir -p alwaysgreen/t3/typo3conf/ext && mv ext-alwaysgreen alwaysgreen/t3/typo3conf/ext/alwaysgreen && cd alwaysgreen
+script: \curl --user-agent "AOE-CI" -sSL http://bit.ly/t3-ci | bash -s $BRANCH --travis --extension="alwaysgreen"
